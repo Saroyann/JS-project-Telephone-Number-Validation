@@ -1,0 +1,50 @@
+html {
+    background: #34282C;
+    font-family: 'Raleway', sans-serif;
+}
+
+h1,
+label,
+p {
+    color: white;
+}
+
+input {
+    padding: 0px 0px 0px 5px;
+    margin: 0px 0px 10px 0px;
+    font-size: 16px;
+    height: 40px;
+    width: 120px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px #999;
+}
+
+#valBtn {
+    padding: 0px;
+    margin: 0px 0px 10px 0px;
+    font-size: 16px;
+    border: none;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    background: tomato;
+    color: white;
+    box-shadow: 0 4px #999;
+
+}
+
+#valBtn:active {
+    transform: translateY(3px);
+    box-shadow: 0 3px #666;
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+#result {
+    color: white;
+}
