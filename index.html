@@ -1,14 +1,14 @@
 <link rel="stylesheet" href="style.css">
-<div class="container">
-
-    <h1>Phone number validator</h1>
-    <p>Enter a phone number to be validated</p>
-    <input id="input" placeholder="phone" type='text'>
-    <button id="valBtn">Validate</button>
-    <hr/>
-    <div id="result"></div>
-
-
+<div class="p-4">
+    <form id="myform">
+        <div>
+            <label for="myform_phone">Phone:</label>
+            <input type="text" id="myform_phone" name="phone" />
+            <div id="phone_error" class="error hidden">Invalid Number</div>
+        </div>
+        <div class="mt-2">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
 </div>
 <script src="script.js"></script>
-    

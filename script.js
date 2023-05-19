@@ -1,26 +1,18 @@
-var ValidateModule = (function () {
-    //set module vars
-    var result = $('#result');
-    var btn = $('#valBtn');
+function validatePhoneNumber(input_str) {
+    var re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
 
-    //expose this function
-    return {
-        bindUiActions: function () {
-            btn.click(function () {
-                var input = $('#input').val();
-                ValidateModule.validatePhoneNumber(input);
-            });
-        },
-        validatePhoneNumber: function (input) {
-            var regex = /1?[\s-]?\(?(\d{3})\)?[\s-]?\d{3}[\s-]?\d{4}/;
+    return re.test(input_str);
+}
 
-            //result.html(regex.test(input));
-            if (input.match(regex)) {
-                result.html("<p>Valid Number</p>");
-            } else {
-                result.html("<p>Invalid Number</p>");
-            }
-        }
+function validateForm(event) {
+    var phone = document.getElementById('myform_phone').value;
+    if (!validatePhoneNumber(phone)) {
+        document.getElementById('phone_error').classList.remove('hidden');
+    } else {
+        document.getElementById('phone_error').classList.add('hidden');
+        alert("validation success")
     }
-})();
-ValidateModule.bindUiActions();
+    event.preventDefault();
+}
+
+document.getElementById('myform').addEventListener('submit', validateForm);
