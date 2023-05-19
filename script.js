@@ -16,9 +16,9 @@ var ValidateModule = (function () {
 
             //result.html(regex.test(input));
             if (input.match(regex)) {
-                result.html("<p>That looks good!</p>");
+                result.html("<p>Valid Number</p>");
             } else {
-                result.html("<p>Nope, wrong</p>");
+                result.html("<p>Invalid Number</p>");
             }
         }
     }
